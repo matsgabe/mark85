@@ -1,0 +1,23 @@
+{
+  "name": "mark85-cypress-api",
+  "version": "1.0.0",
+  "description": "Projeto de testes de API do mark85",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run"
+  },
+  "keywords": [
+    "cypress",
+    "api",
+    "mark85",
+    "mongodb",
+    "cloudamqp"
+  ],
+  "author": "Matheus Gabriel da Silva",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^15.9.0",
+    "cypress-plugin-api": "^2.11.2",
+    "mongodb": "^7.0.0"
+  }
+}
