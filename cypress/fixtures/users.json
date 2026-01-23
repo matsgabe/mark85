@@ -1,2 +1,30 @@
 {
+    "login": {
+        "name": "Lucas moura",
+        "email": "lc7@hotmail.com",
+        "password": "ehtois123"
+    },
+    "inv_pass": {
+        "email": "matsgabe@yahoo.com",
+        "password": "vasco123"
+    },
+    "email_404": {
+        "email": "404@yahoo.com",
+        "password": "vasco404"
+    },
+    "create": {
+        "name": "Matheus Gabriel",
+        "email": "matsgabe@yahoo.com",
+        "password": "A2B.vasco"
+    },
+    "dup_email": {
+        "name": "Neymar Junior",
+        "email": "neyjr@yahoo.com",
+        "password": "W3b.ney"
+    },
+    "required": {
+        "name": "Cleiton Rasta",
+        "email": "cleitonrasta@gmail.com",
+        "password": "pedra"
+    }
 }

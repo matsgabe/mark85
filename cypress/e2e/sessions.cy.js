@@ -1,10 +1,12 @@
-describe("POST /sessions", () => {
-  it("user session", () => {
-    const userData = {
-      name: "Gabriel Matheus",
-      email: "gabemats@yahoo.com",
-      password: "A2B.vasco",
-    };
+describe("POST /sessions", function () {
+  beforeEach(function () {
+    cy.fixture("users").then(function (users) {
+      this.users = users;
+    });
+  });
+
+  it("user session", function () {
+    const userData = this.users.login;
 
     cy.task("deleteUser", userData.email);
     cy.postUser(userData);
@@ -18,36 +20,19 @@ describe("POST /sessions", () => {
     });
   });
 
-  it("invalid password", () => {
-    const user = {
-      email: "matsgabe@yahoo.com",
-      password: "A2B.silv234",
-    };
+  it("invalid password", function () {
+    const user = this.users.inv_pass;
 
     cy.postSession(user).then((response) => {
       expect(response.status).to.eq(401);
     });
   });
 
-  it("email not found", () => {
-    const user = {
-      email: "matsgabesdsdsds@yahoo.com",
-      password: "A2B.vasco",
-    };
+  it("email not found", function () {
+    const user = this.users.email_404;
 
     cy.postSession(user).then((response) => {
       expect(response.status).to.eq(401);
     });
-  });
-});
-
-Cypress.Commands.add("postSession", (user) => {
-  cy.api({
-    url: "/sessions",
-    method: "POST",
-    body: { email: user.email, password: user.password },
-    failOnStatusCode: false,
-  }).then((response) => {
-    return response;
   });
 });
