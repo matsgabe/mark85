@@ -1,0 +1,13 @@
+{
+  "create": {
+    "user": {
+      "name": "Matheus Gabriel",
+      "email": "matsgabe@bol.com",
+      "password": "A2B.vasco"
+    },
+    "task": {
+      "name": "Pagar a fatura do meu cartão",
+      "tags": ["nubank", "smiles", "ourocard"]
+    }
+  }
+}
